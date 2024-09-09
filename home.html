@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonTrack</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="form3.css">
+    <link rel="stylesheet" href="form1.css">
+    <link rel="stylesheet" href="form4.css">
+    <link rel="stylesheet" href="graphs.css">
+
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+ 
+    <div class="sidenav">
+        <div class="logo">CarbonTrack</div>
+        <button class="nav-button" onclick="scrollToSection('home')">Home</button>
+        <button class="nav-button" onclick="scrollToSection('about')">About</button>
+        <button class="nav-button" onclick="scrollToSection('form1')">Total Emmisions</button>
+        <button class="nav-button" onclick="scrollToSection('form2')">Total Sequestration</button>
+        <button class="nav-button" onclick="scrollToSection('form3')">Emmision Reduction</button>
+        <button class="nav-button" onclick="scrollToSection('form4')">Carbon Credit</button>
+        <button class="nav-button" onclick="scrollToSection('form5')">Graphs</button>
+        <button class="nav-button" onclick="scrollToSection('credits')">Credits</button>
+    </div>
+
+   
+    <div class="content">
+        <section id="home" class="section home">
+            <div class="hero">
+                <h1>Welcome to CarbonTrack</h1>
+                <p>Track and quantify your carbon emissions in coal mines with ease.</p>
+            </div>
+            <div class="interactive-boxes">
+                <div class="info-box quote-box">
+                    <p>"Our goal is to make carbon management as simple as possible. Together, we can make a difference."</p>
+                </div>
+                <div class="info-box card-box">
+                    <h3>Carbon Emissions</h3>
+                    <p>Understand the impact of your mining activities and track your progress towards carbon neutrality.</p>
+                </div>
+                <div class="info-box card-box">
+                    <h3>Clean Technologies</h3>
+                    <p>Explore the latest technologies to reduce emissions and improve sustainability in mining operations.</p>
+                </div>
+                <div class="info-box card-box">
+                    <h3>Afforestation</h3>
+                    <p>Learn about how planting trees can offset carbon emissions and contribute to a greener planet.</p>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <section id="about">
+            <div class="a-cont">
+                <div class="about-container">
+                    <h2>About CarbonTrack</h2>
+                    <p class="mission-statement">Our mission is to help coal mines quantify, manage, and reduce their carbon emissions, driving towards a sustainable future.</p>
+            
+                    <div class="features">
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line feature-icon"></i> 
+                            <h3>Quantify Emissions</h3>
+                            <p>Precisely measure emissions from mining activities in real-time.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-database feature-icon"></i> 
+                            <h3>Analyze Data</h3>
+                            <p>Understand carbon footprints with detailed analytics and reports.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-leaf feature-icon"></i> 
+                            <h3>Reduce Impact</h3>
+                            <p>Implement strategies to lower emissions and achieve carbon neutrality.</p>
+                        </div>
+                    </div>
+            
+                    <div class="progress-container">
+                        <h3>Our Impact So Far</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 02%;"></div>
+                        </div>
+                        <p>0% Carbon Reduction Target Achieved</p>
+                    </div>
+            
+                    <a href="#form1" class="learn-more-btn">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="form1" class="section">
+            <div class="container sec1">
+                <h1>Mining Emission Analysis</h1>
+                
+                <div class="flex1 sec1">
+                   
+                    <div class="grid sec1">
+                       
+                        <div class="block sec1">
+                            <h3>Excavation</h3>
+                            <label for="excavation">Fuel Consumption (liters)</label>
+                            <input type="number" id="excavation" placeholder="Enter liters used" />
+                        </div>
+                        
+                        
+                        <div class="block sec1">
+                            <h3>Transportation</h3>
+                            <label for="transportation">Fuel Consumption (liters)</label>
+                            <input type="number" id="transportation" placeholder="Enter liters used" />
+                        </div>
+                        
+                       
+                        <div class="block sec1">
+                            <h3>Fuel Combustion (On-site Generators)</h3>
+                            <label for="fuel-combustion">Fuel Consumption (liters)</label>
+                            <input type="number" id="fuel-combustion" placeholder="Enter liters used" />
+                        </div>
+                        
+                    
+                        <div class="block sec1">
+                            <h3>Electricity Usage</h3>
+                            <label for="electricity">Electricity Consumption (kWh)</label>
+                            <input type="number" id="electricity" placeholder="Enter kWh used" />
+                        </div>
+                        
+                       
+                        <div class="block sec1">
+                            <h3>Blasting/Drilling</h3>
+                            <label for="blasting">Fuel Consumption (liters)</label>
+                            <input type="number" id="blasting" placeholder="Enter liters used" />
+                        </div>
+                        
+                        
+                        <div class="block sec1">
+                            <h3>Water Pumping</h3>
+                            <label for="water-pumping">Electricity Consumption (kWh)</label>
+                            <input type="number" id="water-pumping" placeholder="Enter kWh used" />
+                        </div>
+                        
+                        
+                        <div class="block sec1">
+                            <h3>Ventilation/Cooling</h3>
+                            <label for="ventilation">Electricity Consumption (kWh)</label>
+                            <input type="number" id="ventilation" placeholder="Enter kWh used" />
+                        </div>
+                        
+                       
+                        <div class="block sec1">
+                            <h3>Methane Emissions</h3>
+                            <label for="methane">Methane Emitted (kg)</label>
+                            <input type="number" id="methane" placeholder="Enter methane (CH₄) in kg" />
+                        </div>
+            
+                       
+                        <div class="block sec1">
+                            <h3>Employees</h3>
+                            <label for="employees">Number of Employees</label>
+                            <input type="number" id="employees" placeholder="Enter number of employees" />
+                        </div>
+                    </div>
+                </div>
+            
+                
+                <div class="flex2 sec1">
+                  
+                    <button class="calculate-btn sec1" id="btn">Calculate Emissions</button>
+                   
+                    <div class="result sec1" id="result1">
+                     
+                    </div>
+                </div>
+                <div class="footer sec1">
+                    
+                </div>
+            </div>
+           
+        </section>
+
+     
+        <section id="form2" class="section">
+            <div class="container sec2">
+                <h1>Carbon Sink & Afforestation</h1>
+                
+                <div class="cover sec2">
+                    <div class="block-container sec2">
+                    
+                        <div class="grid sec2">
+                            
+                            <div class="block sec2">
+                                <h3>Existing Forest Cover</h3>
+                                <label for="forest-area">Area of Forest (hectares)</label>
+                                <input class="input-box" type="number" id="forest-area" placeholder="Enter forest area in hectares" />
+                            </div>
+                            
+                           
+                            <div class="block sec2">
+                                <h3>Planned Afforestation</h3>
+                                <label for="afforestation-area">Planned Area for Afforestation (hectares)</label>
+                                <input type="number" id="afforestation-area" placeholder="Enter planned area in hectares" />
+                            </div>
+                            
+                            
+                            <div class="block sec2">
+                                <h3>Total Emissions</h3>
+                                <label for="total-emissions">Total Emissions (kg CO₂)</label>
+                                <input type="number" id="total-emissions" placeholder="Enter total emissions in kg CO₂" />
+                            </div>
+            
+                            
+                            <button class="calculate-btn sec2" id="result-btn">Calculate Sequestration & Gap</button>
+            
+                           
+                            <div class="result sec2" id="result2">
+                               
+                            </div>
+                            
+            
+                            
+                            
+                        </div>
+                    </div>
+            
+                
+                  
+                    <div class="chart-container sec2">
+                        <div class="recommendation sec2" id="recommendation-section">
+                            
+                        </div>
+                        <canvas id="sequestrationChart" class="chart sec2"></canvas>
+                    </div>
+                </div>
+            
+            </div>
+            
+        
+        </section>
+
+        
+        <section id="form3" class="section">
+            <div class="container">
+                <h1>Emission Reduction Strategies</h1>
+                <div class = "cont">
+                    <div class="flex">
+                        
+                        <div class="grid">
+                            
+                            <div class="block3">
+                                <h3>Clean Technologies</h3>
+                                
+                            <div>
+                                <label for="clean-techs" id="t">Number of Clean Technologies (e.g., Electric Vehicles)</label>
+                                <input type="number" id="clean-techs" placeholder="Enter number of clean technologies" />
+                            </div>
+                            <div>
+                                <label for="reduction-per-tech" id="t">Reduction per Technology (tons CO₂)</label>
+                                <input type="number" id="reduction-per-tech" placeholder="Enter CO₂ reduction per technology" />
+                            </div>
+                            </div>
+                            
+                          
+                            <div class="block3">
+                                <h3>Alternative Energy Usage</h3>
+                                    <div>
+                                        <label for="total-energy"id="t">Total Energy Consumption (kWh)</label>
+                                        <input type="number" id="total-energy" placeholder="Enter total energy consumption in kWh" />
+                                    </div>
+                                    <div>    
+                                        <label for="renewable-percentage"id="t">Percentage of Renewable Energy Adopted (%)</label>
+                                        <input type="number" id="renewable-percentage" placeholder="Enter % of renewable energy" />
+                                    </div>
+                                    <div>  
+                                        <label for="emission-factor"id="t">Emission Factor for Traditional Energy (kg CO₂/kWh)</label>
+                                        <input type="number" id="emission-factor" value="1" placeholder="Enter emission factor (default: 1 kg CO₂/kWh)" />
+                                    </div>    
+                            </div>
+                        </div>
+                
+                    
+                    <button class="calculate-btn3" id="cal">Calculate Reduction</button>
+                
+                    
+                    <div class="result3" id="result3">
+                       
+                       
+                    </div>
+                
+                   
+                
+                </div>
+                <div class="flex2">
+                    <div class="recommendation3" id="recommendation1">
+                        
+                    </div>
+                   
+                    <div class="chart-container3">
+                        <canvas id="reductionChart"></canvas>
+                    </div>
+                
+                </div>
+                </div>
+            </div>
+
+          
+        </section>
+
+        
+        <section id="form4" class="section">
+            
+
+<div class="container4">
+            <h1>Carbon Credits & Financial Analysis</h1>
+        <div class="a">
+        <div class="c">
+            
+            <div class="grid4">
+              
+                <div class="block4">
+                    <h3>Total Emission Reduction</h3>
+                    <br>
+                    <label for="emission-reduction">Total Emission Reduction (kg CO₂)</label>
+                    <input type="number" id="emission-reduction" placeholder="Enter total emission reduction in kg CO₂" />
+                </div>
+                
+               
+                <div class="block4">
+                    <h3>Market Price per Carbon Credit</h3>
+                    <br>
+                    <label for="market-price">Market Price per Credit (USD/ton CO₂)</label>
+                    <input type="number" id="market-price" value="10" placeholder="Enter price per carbon credit (default: 10 USD/ton)" />
+                </div>
+            </div>
+
+           
+            <button class="calculate-btn4" id="calculate-btn">Calculate Financial Value</button>
+        </div>
+        <div class="c2">
+            
+            <div class="result4" id="result4">
+                
+            </div>
+
+            
+            <div class="chart-container4">
+                <canvas id="financialChart"></canvas>
+            </div>
+           
+            
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section sec5" id="form5">
+        <div class="container sec5">
+            <h1>Emission and Reduction Analysis</h1>
+    <div class="d sec5">
+            
+            <div class="graph-section sec5">
+                <h2>Total Emission (Past 24 Hours)</h2>
+                <canvas id="totalEmissionChart"></canvas>
+                <p>Average Emission: <span id="totalEmissionAverage"></span></p>
+            </div>
+        
+            
+            <div class="graph-section sec5">
+                <h2>Total Reduction (Past 24 Hours)</h2>
+                <canvas id="totalReductionChart"></canvas>
+                <p>Average Reduction: <span id="totalReductionAverage"></span></p>
+            </div>
+        
+            
+            <div class="graph-section sec5">
+                <h2>Total Sequestration (Yearly)</h2>
+                <canvas id="totalSequestrationChart"></canvas>
+                <p>Average Sequestration: <span id="totalSequestrationAverage"></span></p>
+            </div>
+        
+            
+            <div class="graph-section sec5">
+                <h2>Carbon Credit (Monthly)</h2>
+                <canvas id="carbonCreditChart"></canvas>
+                <p>Average Carbon Credit: <span id="carbonCreditAverage"></span></p>
+            </div>
+        
+            <div class="graph-section sec5">
+                <h2>Financial Value (Monthly)</h2>
+                <canvas id="financialValueChart"></canvas>
+                <p>Average Financial Value: <span id="financialValueAverage"></span></p>
+            </div>
+        </div>
+        </div>
+        
+            
+        </section>
+
+        <section id="credits" class="credits-section">
+            <h2>Meet the Team</h2>
+            <div class="team-container">
+                <div class="team-member-card">
+                    <div class="front">
+                        <h3>Rishit Abhilash</h3>
+                        <p>Lead Developer</p>
+                    </div>
+                    <div class="back">
+                        <p>"Turning ideas into reality with a clean code."</p>
+                        <p>Specialty: Full-Stack Development</p>
+                    </div>
+                </div>
+                
+                <div class="team-member-card">
+                    <div class="front">
+                        <h3>Vidushi Saxena</h3>
+                        <p>Data Scientist</p>
+                    </div>
+                    <div class="back">
+                        <p>"Transforming data into actionable insights."</p>
+                        <p>Specialty: Data Analysis</p>
+                    </div>
+                </div>
+        
+                <div class="team-member-card">
+                    <div class="front">
+                        <h3>Anirudh</h3>
+                        <p>Backend Developer</p>
+                    </div>
+                    <div class="back">
+                        <p>"Crafting scalable and efficient backend systems."</p>
+                        <p>Specialty: API Development & Cloud Services</p>
+                    </div>
+                </div>
+        
+                <div class="team-member-card">
+                    <div class="front">
+                        <h3>Zahra Rakhshan</h3>
+                        <p>UI-UX Designer</p>
+                    </div>
+                    <div class="back">
+                        <p>"Designing intuitive and user-friendly interfaces."</p>
+                        <p>Specialty: User Experience & Interface Design</p>
+                    </div>
+                </div>
+        
+                <div class="team-member-card">
+                    <div class="front">
+                        <h3>Ratul Pal</h3>
+                        <p>Frontend Developer</p>
+                    </div>
+                    <div class="back">
+                        <p>"Crafting user interfaces with precision and creativity."</p>
+                        <p>Specialty: Frontend Technologies</p>
+                    </div>
+                </div>
+                
+                <div class="team-member-card">
+                    <div class="front">
+                        <h3>Namrata Dhingra</h3> 
+                        <p>Frontend Developer</p>
+                    </div>
+                    <div class="back">
+                        <p>"Bringing designs to life with modern web technologies."</p>
+                        <p>Specialty: Responsive Design & JavaScript Frameworks</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>               
+    </div>
+
+    <script src="home.js"></script>
+    <script type="module" src="/js/co2analysis.js"></script>
+    <script type="module" src ="/js/carbonsink.js"></script>
+    <script type="module" src="/js/emreduction.js"></script>
+    <script type="module" src="/js/carboncredit.js"></script>
+    <script type="module" src="/js/graphs.js"></script>
+</body>
+</html>

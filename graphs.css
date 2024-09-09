@@ -1,0 +1,62 @@
+
+.section.sec5{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    align-items: start;
+}
+
+.container.sec5 h1 {
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+
+.container.sec5{
+    display: flex;
+    height: 100vh;
+    width: 95%;
+    padding: 0% 2%;
+    flex-direction: column;
+}
+.d.sec5{
+    height: 80%;
+    width: 100%;
+    display: grid;
+    padding: 20px;
+    gap: 20px;
+    grid-template-columns: repeat(3,0.7fr);
+    background-color: #2c3e50;
+    border-radius: 10px;
+}
+.graph-section.sec5 {
+    display: flex;
+    flex-direction: column;
+    background-color: #c1d8ee;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    transition: 200ms ease-in-out;
+}
+
+.graph-section.sec5:hover {
+    transform: translateY(-8px); /* Increased hover lift */
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.2);
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    height: 60% !important;
+    width:100% !important;
+    /* max-width: 800px;
+    height: 400px; */
+}
+
+p.sec5 {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
