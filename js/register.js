@@ -33,7 +33,7 @@ document.getElementById("register").addEventListener("click", function() {
   .then((userCredential) => {
     const user = userCredential.user;
     console.log(user);
-    window.location.href = "/login.html";
+    window.location.href = "login.html";
     
   })
   .catch((error) => {
