@@ -30,7 +30,7 @@ document.getElementById("login").addEventListener("click", function() {
     console.log(user);
     alert("Login successful!");
     
-    window.location.href = "/home.html";
+    window.location.href = "home.html";
   })
   .catch((error) => {
     const errorCode = error.code;
